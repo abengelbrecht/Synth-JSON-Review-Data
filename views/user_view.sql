@@ -1,0 +1,1 @@
+create or replace view fs.mongo_views.user_view_syn as select cast(u.user_id as bigint) as user_id, u.name, u.gender, u.age, u.review_count, u.avg_rating, u.user_votes.helpful as helpful_votes, u.user_votes.cool as cool_votes, u.user_votes.unhelpful as unhelpful_votes, u.friends_count from mongo.review_syn.`user` u;

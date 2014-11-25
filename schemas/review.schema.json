@@ -1,0 +1,47 @@
+[
+   {"name":"business_id", "class":"foreign-key", "size":1000},
+   {"name":"user_id", "class":"foreign-key", "size":5000},
+   {"name":"rating", "class":"int", "min":1, "max":5, "skew": -1},
+   {"name":"date", "class":"date", "format":"dd/MM/yyyy", "start":"01/01/2010", "end":"12/31/2013"},
+   {
+	"name":"review_text", 
+	"class":"join",
+	"separator": " ",
+	"value": {
+	  "class":"sequence",
+	  "length":20,
+	  "array":[
+		{"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"},
+                {"class":"word"}
+	 ]
+	}
+    },
+   {	"name":"votes", 
+	"class":"map",
+	"value":[
+			{"name":"helpful", "class":"int", "min":0, "max":50},
+                        {"name":"cool", "class":"int", "min":0, "max":30},
+                        {"name":"unhelpful", "class":"int", "min":0, "max":10}
+		]
+		}
+
+
+]

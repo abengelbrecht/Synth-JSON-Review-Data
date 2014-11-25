@@ -1,0 +1,52 @@
+[
+   {"name":"business_id", "class":"id"},
+   {
+	"name":"name", 
+	"class":"join",
+	"separator": "'s ",
+	"value": {
+	  "class":"sequence",
+	  "length":2,
+	  "array":[
+		{"class":"name", "type":"first"},
+		{"class":"string", "dist":{"Restaurant":10, "Diner":2, "Bar":10, "Club":5, "Coffee House":3, "Cafe":8}}
+	 ]
+	}
+    },
+   {"name":"category", "class":"string", "dist":{"Restaurant":10, "Diner":2, "Bar":10, "Club":5, "Coffee House":3, "Cafe":8}},	
+   {"name":"rating", "class":"int", "min":1, "max”:5, “skew”: -1},
+   {"name":"num_of_reviews", "class":"int", "min":10, "max":20000},
+   {	"name":"attributes", 
+	"class":"map",
+	"value":[
+		{"name":"good for",
+		 "class":"map",
+		 "value":[
+			{"name":"dessert", "class":"string", "dist":{"true":10, "false":5}},
+                        {"name":"kids", "class":"string", "dist":{"true":10, "false":10}},
+                        {"name":"drinks", "class":"string", "dist":{"true":10, "false":10}},
+                        {"name":"breakfast", "class":"string", "dist":{"true":5, "false":5}},
+                        {"name":"lunch", "class":"string", "dist":{"true":10, "false":5}},
+                        {"name":"dinner", "class":"string", "dist":{"true":10, "false":5}}
+		]
+		},
+                {"name":"parking",
+                 "class":"map",
+                 "value":[
+                        {"name":"lot", "class":"string", "dist":{"true":10, "false":5}},
+                        {"name":"valet", "class":"string", "dist":{"true":1, "false":5}},
+                        {"name":"garage", "class":"string", "dist":{"true":1, "false":10}}
+                ]
+                },
+		{"name":"take reservations", "class":"string", "dist":{"yes":2, "false":5}},
+                {"name":"noise level", "class":"string", "dist":{"quiet":2, "average":10, "noisy":5}}
+
+	]
+   },
+   {
+        "name":"location",
+        "class":"zip",
+        "seed":12,
+        "onlyContinental":"true"
+   }
+]

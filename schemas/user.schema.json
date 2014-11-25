@@ -1,0 +1,19 @@
+[
+   {"name":"user_id", "class":"id"},
+   {"name":"name", "class":"name", "type":"first"},
+   {"name":"gender", "class":"string", "dist":{"MALE":0.35, "FEMALE":0.5, "NA":0.15}},
+   {"name":"age", "class":"int", "min":16, "max":60, "skew": 1},
+   {"name":"review_count", "class":"int", "min":1, "max":2000},
+   {"name":"avg_rating", "class":"int", "min":1, "max":5, "skew": -1},
+   {	"name":"user_votes", 
+	"class":"map",
+	"value":[
+			{"name":"helpful", "class":"int", "min":0, "max":1000},
+                        {"name":"cool", "class":"int", "min":0, "max":1000},
+                        {"name":"unhelpful", "class":"int", "min":0, "max":1000}
+		]
+		},
+   {"name":"friends_count", "class":"int", "min":1, "max":500}
+
+
+]
