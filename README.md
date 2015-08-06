@@ -9,8 +9,8 @@ Also includes schema files to generate much larger data sets using Ted Dunning's
 java -cp target/log-synth-0.1-SNAPSHOT-jar-with-dependencies.jar com.mapr.synth.Synth -count 60000 -format JSON -schema ../Synth-JSON-Review-Data/schemas/business.schema.json
 ```
 
-There are 3 file types: business, user and review. The review file(s) have key fields (business_id and user_id) that corrolates to the business_id field in the business file(s) and the user_id field in the user file(s).
+There are 4 file types: business, user, check-in and review. The review file(s) have key fields (business_id and user_id) that corrolates to the business_id field in the business file(s) and the user_id field in the user file(s). The check-in file(s) have a key field (business_id) that corrolates to the business_id field in the business file(s).
 
-A small sample set is located in the sampl-data directory with 1k records for business, 5k for user and 10k for reviews.
+A small sample set is located in the sampl-data directory with 1k records for business, 5k for user and 10k for reviews. No check-in sample data.
 
 The schema files for all 3 are located in the schemas directory and can be used with the log-synth tool to generate larger data sets. Remember to increase the size of the foreign-keys for both business_id and user_id fields if larger record sets are used for business and user, this is very important to ensure proper correlation between the review records and the business and user records.
