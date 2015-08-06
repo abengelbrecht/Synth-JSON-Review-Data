@@ -13,8 +13,20 @@
 	 ]
 	}
     },
-   {"name":"category", "class":"string", "dist":{"Restaurant":10, "Diner":2, "Bar":10, "Club":5, "Coffee House":3, "Cafe":8}},	
-   {"name":"rating", "class":"int", "min":1, "max”:5, “skew”: -1},
+   {"name":"categories", "class":"sequence", "array":[
+	{"class":"string", "dist":{"Restaurant":10, "Diner":2, "Bar":10, "Club":5, "Coffee House":3, "Cafe":8}},
+	{"class":"string", "dist":{
+			"American":20,
+			"Mexican":18,
+			"Chinese":16,
+			"Korean":12,
+			"French":9,
+			"Japanese/Sushi":8,
+			"German":7,
+			"English":6}}
+	]
+    },
+   {"name":"rating", "class":"int", "min":1, "max":5, "skew": -1},
    {"name":"num_of_reviews", "class":"int", "min":10, "max":20000},
    {	"name":"attributes", 
 	"class":"map",
