@@ -13,4 +13,4 @@ There are 4 file types: business, user, check-in and review. The review file(s) 
 
 A small sample set is located in the sampl-data directory with 1k records for business, 5k for user and 10k for reviews. No check-in sample data.
 
-The schema files for all 3 are located in the schemas directory and can be used with the log-synth tool to generate larger data sets. Remember to increase the size of the foreign-keys for both business_id and user_id fields if larger record sets are used for business and user, this is very important to ensure proper correlation between the review records and the business and user records.
+The schema files for all 4 are located in the schemas directory and can be used with the log-synth tool to generate larger data sets. Remember to increase the size of the foreign-keys for both business_id and user_id fields if larger record sets are used for business and user, this is very important to ensure proper correlation between the review and check-in records and the business and user records.
